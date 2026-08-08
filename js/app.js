@@ -1,10 +1,11 @@
 (() => {
   const SITE_CONFIG = {
-    requestEmail: 'vkreddy@yahoo.com',
+    requestEmail: 'info@meridianbizsolutions.com',
     socialLinks: {
       facebook: '#',
       instagram: '#',
-      youtube: '#'
+      youtube: '#',
+      pinterest: '#'
     }
   };
 
@@ -113,11 +114,11 @@
       html: `
         <p><strong>Last updated:</strong> August 3, 2026</p>
         <h3>Business information</h3>
-        <p>Meridian Business Solutions<br>Serving Northern Virginia and remote clients<br><a href="tel:+13135851839">(313) 585-1839</a><br><a href="mailto:vkreddy@yahoo.com">vkreddy@yahoo.com</a></p>
+        <p>Meridian Business Solutions<br>Serving Northern Virginia and remote clients<br><a href="tel:+17036343365">(703) 634-3365</a><br><a href="mailto:info@meridianbizsolutions.com">info@meridianbizsolutions.com</a></p>
         <h3>Website purpose</h3>
         <p>This website provides general information about services offered by Meridian Business Solutions. Website information is not a binding quote, guarantee, legal opinion, mechanical diagnosis, or commitment to provide service. Availability, pricing, travel fees, eligibility, document requirements, and service limitations are confirmed before an appointment.</p>
         <h3>Professional limitations</h3>
-        <p>Notary services do not include legal advice, document preparation, or selection of a notarial certificate. Auto-service information is general and does not replace a complete inspection or diagnosis by a licensed repair facility when required. Courier and printing services are subject to item, handling, content, and destination restrictions.</p>
+        <p>Notary services do not include legal advice, document preparation, or selection of a notarial certificate. Auto-service information is general and does not replace a complete inspection or diagnosis by a licensed repair facility when required. Logistics services are subject to item, handling, content, and destination restrictions. Educational counseling provides guidance and academic support but does not guarantee grades, test scores, admission, scholarships, or other educational outcomes.</p>
         <h3>Intellectual property</h3>
         <p>The Meridian Business Solutions name, website design, text, and original graphics may not be copied or used commercially without permission, except where permitted by law.</p>
         <h3>External links</h3>
@@ -131,7 +132,7 @@
         <h3>Information we may collect</h3>
         <p>When you contact Meridian Business Solutions, request an appointment, or purchase a service, we may collect your name, phone number, email address, service address, appointment details, vehicle information, delivery instructions, and documents or files you choose to provide.</p>
         <h3>How information is used</h3>
-        <ul><li>Respond to questions and schedule services.</li><li>Verify service requirements and prepare estimates.</li><li>Complete requested notary, courier, auto, or printing work.</li><li>Maintain records required by law or normal business operations.</li><li>Protect customers, the business, and service providers from fraud or misuse.</li></ul>
+        <ul><li>Respond to questions and schedule services.</li><li>Verify service requirements and prepare estimates.</li><li>Complete requested notary, logistics, auto, or educational counseling services.</li><li>Maintain records required by law or normal business operations.</li><li>Protect customers, the business, and service providers from fraud or misuse.</li></ul>
         <h3>Sharing</h3>
         <p>Information may be shared with service platforms, payment processors, technology providers, delivery partners, or authorities when reasonably necessary to provide a service, comply with law, or protect legal rights. We do not sell personal information.</p>
         <h3>Security and retention</h3>
@@ -139,7 +140,7 @@
         <h3>Cookies and analytics</h3>
         <p>This starter website does not include advertising cookies or analytics by default. This policy should be updated if analytics, payments, booking tools, remote-notary platforms, or embedded social features are added.</p>
         <h3>Your choices</h3>
-        <p>Contact <a href="mailto:vkreddy@yahoo.com">vkreddy@yahoo.com</a> to ask about your information, request a correction, or request deletion when retention is not legally required.</p>`
+        <p>Contact <a href="mailto:info@meridianbizsolutions.com">info@meridianbizsolutions.com</a> to ask about your information, request a correction, or request deletion when retention is not legally required.</p>`
     },
     contact: {
       title: 'Contact Us',
@@ -147,13 +148,13 @@
       html: `
         <p>Meridian Business Solutions is here to help with convenient office and mobile services. Share what you need, your preferred timing, and the best way to reach you. We will confirm availability, requirements, and pricing before service begins.</p>
         <div class="contact-grid">
-          <div class="contact-item"><strong>Email</strong><a href="mailto:vkreddy@yahoo.com">vkreddy@yahoo.com</a></div>
-          <div class="contact-item"><strong>Phone</strong><a href="tel:+13135851839">(313) 585-1839</a></div>
+          <div class="contact-item"><strong>Email</strong><a href="mailto:info@meridianbizsolutions.com">info@meridianbizsolutions.com</a></div>
+          <div class="contact-item"><strong>Phone</strong><a href="tel:+17036343365">(703) 634-3365</a></div>
           <div class="contact-item"><strong>Service area</strong><span>In-person services: Northern Virginia<br>Remote services: Available 24 hours (call to schedule)</span></div>
           <div class="contact-item"><strong>Availability</strong><span>At your service. Call or submit a request to schedule professional assistance.</span></div>
         </div>
         <h3>Helpful details to include</h3>
-        <ul><li>The service you need.</li><li>Your preferred date and time.</li><li>Your city or service location.</li><li>Any deadline, document, vehicle, delivery, or printing details.</li><li>The best phone number or email for a response.</li></ul>
+        <ul><li>The service you need.</li><li>Your preferred date and time.</li><li>Your city or service location.</li><li>Any deadline, document, vehicle, delivery, logistics, or academic planning details.</li><li>The best phone number or email for a response.</li></ul>
         <div class="info-callout">Use a Schedule Service button on the home page.</div>`
     }
   };

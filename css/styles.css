@@ -94,7 +94,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; transform: scale(1.01); }
 .hero-content { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 22px; }
 .eyebrow { margin: 0 0 8px; font-size: clamp(10px, .8vw, 12px); text-transform: uppercase; letter-spacing: .2em; font-weight: 800; opacity: .86; }
-.hero h1 { margin: 0; font-size: clamp(22px, calc(3vw - 3px), 43px); line-height: 1.03; letter-spacing: -.035em; max-width: 900px; }
+.hero h1 { margin: 0; font-size: clamp(20px, calc(3vw - 5px), 41px); line-height: 1.03; letter-spacing: -.035em; max-width: 900px; }
 .hero p { margin: 11px auto 0; max-width: 920px; font-size: clamp(12px, 1.05vw, 17px); line-height: 1.45; color: rgba(255,255,255,.92); }
 
 .services-section { min-height: 0; display: grid; grid-template-rows: auto minmax(0,1fr); gap: 9px; }
@@ -251,7 +251,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .main-content { grid-template-rows: minmax(150px, 27vh) minmax(0,1fr); }
   .hero { border-radius: 20px; }
   .hero-content { padding: 17px; }
-  .hero h1 { font-size: clamp(20px, calc(8vw - 3px), 29px); }
+  .hero h1 { font-size: clamp(18px, calc(8vw - 5px), 27px); }
   .hero p { font-size: 11px; }
   .cards-grid { gap: 10px; }
   .service-card { min-width: 78vw; width: 78vw; height: min(100%, 400px); border-radius: 18px; }
@@ -287,7 +287,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .brand img { width: 58px; height: 58px; }
   .brand-name { font-size: 22px; }
   .main-content { grid-template-rows: minmax(130px, 27vh) minmax(0,1fr); gap: 10px; padding-bottom: 8px; }
-  .hero h1 { font-size: 26px; }
+  .hero h1 { font-size: 24px; }
   .hero p { margin-top: 7px; font-size: 12px; }
   .section-head { display: none; }
   .services-section { grid-template-rows: minmax(0,1fr); }
@@ -325,4 +325,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .notary-page .main-content { grid-template-rows: minmax(140px, 24vh) minmax(0, 1fr); }
   .notary-credentials { min-height: 54px; gap: 12px; padding-bottom: 2px; }
   .notary-credentials img { width: 52px; height: 52px; }
+}
+
+@media (max-width: 420px) {
+  .header-actions { gap: 4px; }
+  .social-link { width: 27px; height: 27px; }
+  .social-link svg { width: 13px; height: 13px; }
 }
