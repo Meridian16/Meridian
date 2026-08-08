@@ -193,35 +193,69 @@
     });
   });
 
-  scheduleForm?.addEventListener('submit', (event) => {
+  scheduleForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!scheduleForm.reportValidity()) return;
     const data = new FormData(scheduleForm);
-    const service = data.get('service') || 'General Service';
-    const subject = `Meridian Service Request - ${service}`;
-    const body = [
-      'Hello Meridian Business Solutions,',
-      '',
-      'I would like to request the following service:',
-      '',
-      `Service: ${service}`,
-      `Name: ${data.get('name') || ''}`,
-      `Email: ${data.get('email') || ''}`,
-      `Phone: ${data.get('phone') || 'Not provided'}`,
-      `Preferred date: ${data.get('date') || 'Flexible'}`,
-      `Preferred time: ${data.get('time') || 'Flexible'}`,
-      `Service location: ${data.get('location') || 'To be confirmed'}`,
-      '',
-      'Request details:',
-      `${data.get('details') || ''}`,
-      '',
-      'Please contact me to confirm availability, requirements, and pricing.',
-      '',
-      'Thank you.'
-    ].join('\n');
+    const submitButton = scheduleForm.querySelector('.form-submit');
 
-    scheduleStatus.textContent = 'Preparing your request…';
-    window.location.href = `mailto:${SITE_CONFIG.requestEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const payload = {
+      service: data.get('service') || 'General Service',
+      name: data.get('name') || '',
+      email: data.get('email') || '',
+      phone: data.get('phone') || '',
+      date: data.get('date') || '',
+      time: data.get('time') || '',
+      location: data.get('location') || '',
+      details: data.get('details') || ''
+    };
+
+    if (scheduleStatus) {
+      scheduleStatus.textContent = '';
+      scheduleStatus.classList.remove('form-status-error', 'form-status-success');
+    }
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending…';
+    }
+
+    try {
+      const response = await fetch('/api/service-request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Something went wrong. Please try again.');
+      }
+
+      if (scheduleStatus) {
+        scheduleStatus.textContent = 'Thanks — your request has been sent. We’ll be in touch shortly.';
+        scheduleStatus.classList.add('form-status-success');
+      }
+
+      setTimeout(() => {
+        closeModal(scheduleBackdrop);
+        scheduleForm.reset();
+        if (scheduleStatus) {
+          scheduleStatus.textContent = '';
+          scheduleStatus.classList.remove('form-status-success');
+        }
+      }, 1800);
+
+    } catch (err) {
+      if (scheduleStatus) {
+        scheduleStatus.textContent = err.message || 'Something went wrong. Please try again.';
+        scheduleStatus.classList.add('form-status-error');
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Request';
+      }
+    }
   });
 
 

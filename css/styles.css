@@ -215,6 +215,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .form-submit:hover { filter: brightness(1.07); }
 .form-help { margin: 12px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; text-align: center; }
 .form-status { min-height: 20px; margin: 6px 0 0; color: var(--navy); font-size: 13px; font-weight: 750; text-align: center; }
+.form-status.form-status-success { color: #1f5e2e; }
+.form-status.form-status-error { color: #a5322a; }
 
 .legal-page { min-height: 100vh; padding: 26px 18px 50px; background: linear-gradient(180deg,#f8fdff,var(--sky)); }
 .legal-wrap { width: min(900px,100%); margin: 0 auto; }
