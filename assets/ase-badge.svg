@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="t d">
+  <title id="t">ASE</title><desc id="d">Automotive Service Excellence reference badge</desc>
+  <rect width="220" height="220" rx="28" fill="#fff"/>
+  <g transform="translate(110 91)">
+    <circle r="68" fill="#0b7fbd"/>
+    <g fill="#0b7fbd">
+      <rect x="-7" y="-83" width="14" height="28" rx="3"/>
+      <rect x="-7" y="55" width="14" height="28" rx="3"/>
+      <rect x="55" y="-7" width="28" height="14" rx="3"/>
+      <rect x="-83" y="-7" width="28" height="14" rx="3"/>
+      <rect x="-7" y="-83" width="14" height="28" rx="3" transform="rotate(45)"/>
+      <rect x="-7" y="55" width="14" height="28" rx="3" transform="rotate(45)"/>
+      <rect x="55" y="-7" width="28" height="14" rx="3" transform="rotate(45)"/>
+      <rect x="-83" y="-7" width="28" height="14" rx="3" transform="rotate(45)"/>
+    </g>
+    <text x="0" y="17" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="900" fill="#fff">ASE</text>
+  </g>
+  <text x="110" y="184" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="800" fill="#002060">ase.com</text>
+</svg>
