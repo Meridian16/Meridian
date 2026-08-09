@@ -273,30 +273,65 @@
     });
   });
 
-  partnerForm?.addEventListener('submit', (event) => {
+  partnerForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!partnerForm.reportValidity()) return;
     const data = new FormData(partnerForm);
-    const subject = 'Meridian Partnership Request';
-    const body = [
-      'Hello Meridian Business Solutions,',
-      '',
-      'I would like to discuss a possible partnership.',
-      '',
-      `Name: ${data.get('name') || ''}`,
-      `Email: ${data.get('email') || ''}`,
-      `Phone: ${data.get('phone') || 'Not provided'}`,
-      '',
-      'Partnership details:',
-      `${data.get('details') || ''}`,
-      '',
-      'Please contact me to discuss the opportunity.',
-      '',
-      'Thank you.'
-    ].join('\n');
+    const submitButton = partnerForm.querySelector('.form-submit');
 
-    if (partnerStatus) partnerStatus.textContent = 'Preparing your request…';
-    window.location.href = `mailto:${SITE_CONFIG.requestEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const payload = {
+      name: data.get('name') || '',
+      email: data.get('email') || '',
+      phone: data.get('phone') || '',
+      details: data.get('details') || ''
+    };
+
+    if (partnerStatus) {
+      partnerStatus.textContent = '';
+      partnerStatus.classList.remove('form-status-error', 'form-status-success');
+    }
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending…';
+    }
+
+    try {
+      const response = await fetch('/api/partner-inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Something went wrong. Please try again.');
+      }
+
+      if (partnerStatus) {
+        partnerStatus.textContent = 'Thanks — your request has been sent. We’ll be in touch shortly.';
+        partnerStatus.classList.add('form-status-success');
+      }
+
+      setTimeout(() => {
+        closeModal(partnerBackdrop);
+        partnerForm.reset();
+        if (partnerStatus) {
+          partnerStatus.textContent = '';
+          partnerStatus.classList.remove('form-status-success');
+        }
+      }, 1800);
+
+    } catch (err) {
+      if (partnerStatus) {
+        partnerStatus.textContent = err.message || 'Something went wrong. Please try again.';
+        partnerStatus.classList.add('form-status-error');
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Request';
+      }
+    }
   });
 
   document.addEventListener('keydown', (event) => {

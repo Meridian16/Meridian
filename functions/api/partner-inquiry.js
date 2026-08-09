@@ -1,14 +1,13 @@
 // Cloudflare Pages Function
 // Route: POST /api/partner-inquiry
-// Sends the submitted form data as an email via the Resend API.
+// Sends a "Partner With Us" form submission as an email via the Resend API.
 //
-// Required environment variable (set in Cloudflare Pages dashboard):
-//   RESEND_API_KEY   -> your Resend API key (kept secret, never exposed to the browser)
+// Required environment variable (already set in Cloudflare Pages):
+//   RESEND_API_KEY
 //
 // Optional environment variables:
-//   TO_EMAIL          -> defaults to info@meridianbizsolutions.com
-//   FROM_EMAIL         -> defaults to Partner Inquiries <partners@meridianbizsolutions.com>
-//                          (must be an address on a domain verified in Resend)
+//   TO_EMAIL     -> defaults to info@meridianbizsolutions.com
+//   FROM_EMAIL   -> defaults to Meridian Business Solutions <requests@meridianbizsolutions.com>
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -20,7 +19,7 @@ export async function onRequestPost(context) {
     return jsonResponse({ error: "Invalid request body." }, 400);
   }
 
-  const { website, fullName, companyName, email, phone, message } = body || {};
+  const { website, name, email, phone, details } = body || {};
 
   // Honeypot: if this hidden field is filled in, silently pretend success (it's a bot)
   if (website) {
@@ -28,7 +27,7 @@ export async function onRequestPost(context) {
   }
 
   // Basic server-side validation
-  if (!fullName || !companyName || !email || !message) {
+  if (!name || !email || !details) {
     return jsonResponse({ error: "Please fill in all required fields." }, 400);
   }
 
@@ -43,7 +42,7 @@ export async function onRequestPost(context) {
   }
 
   const toEmail = env.TO_EMAIL || "info@meridianbizsolutions.com";
-  const fromEmail = env.FROM_EMAIL || "Partner Inquiries <partners@meridianbizsolutions.com>";
+  const fromEmail = env.FROM_EMAIL || "Meridian Business Solutions <requests@meridianbizsolutions.com>";
 
   const escapeHtml = (str = "") =>
     String(str)
@@ -52,13 +51,12 @@ export async function onRequestPost(context) {
       .replace(/>/g, "&gt;");
 
   const html = `
-    <h2>New Partner Inquiry</h2>
-    <p><strong>Name:</strong> ${escapeHtml(fullName)}</p>
-    <p><strong>Company:</strong> ${escapeHtml(companyName)}</p>
+    <h2>New Partnership Inquiry</h2>
+    <p><strong>Name:</strong> ${escapeHtml(name)}</p>
     <p><strong>Email:</strong> ${escapeHtml(email)}</p>
     <p><strong>Phone:</strong> ${escapeHtml(phone || "Not provided")}</p>
-    <p><strong>Message:</strong></p>
-    <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
+    <p><strong>Details:</strong></p>
+    <p>${escapeHtml(details).replace(/\n/g, "<br>")}</p>
   `;
 
   try {
@@ -72,7 +70,7 @@ export async function onRequestPost(context) {
         from: fromEmail,
         to: [toEmail],
         reply_to: email,
-        subject: `New Partner Inquiry — ${companyName}`,
+        subject: `Partnership: Inquiry`,
         html
       })
     });
