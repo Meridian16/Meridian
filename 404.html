@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="refresh" content="5;url=https://meridianbizsolutions.com/">
+  <title>Page Not Found | Meridian Business Solutions</title>
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --navy: #002060;
+      --sky: #eaf7ff;
+      --blue: #3f91cf;
+      --blue-light: #76c7f2;
+      --white: #ffffff;
+      --text: #17385f;
+      --muted: #526f8d;
+      --line: rgba(0, 32, 96, 0.12);
+      --shadow: 0 30px 80px rgba(0, 20, 60, 0.24);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--navy);
+      background:
+        radial-gradient(circle at 92% 4%, rgba(118, 199, 242, 0.28), transparent 27%),
+        radial-gradient(circle at 7% 94%, rgba(63, 145, 207, 0.15), transparent 30%),
+        linear-gradient(180deg, #f9fdff 0%, var(--sky) 100%);
+    }
+
+    .error-card {
+      width: min(650px, 100%);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      border-radius: 26px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      text-align: center;
+      animation: enter 0.45s ease-out both;
+    }
+
+    .error-card__top {
+      min-height: 116px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: linear-gradient(135deg, var(--navy), #2f82c6);
+    }
+
+    .error-card__logo {
+      width: 92px;
+      height: 92px;
+      display: block;
+      filter: drop-shadow(0 10px 18px rgba(0, 20, 60, 0.22));
+    }
+
+    .error-card__body { padding: 34px 38px 38px; }
+
+    .error-code {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 850;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(27px, 5vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .message {
+      max-width: 500px;
+      margin: 17px auto 0;
+      color: var(--text);
+      font-size: clamp(15px, 2.4vw, 18px);
+      line-height: 1.65;
+    }
+
+    .redirect-note {
+      margin: 20px auto 0;
+      padding: 13px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--sky);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .home-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      margin-top: 23px;
+      padding: 0 25px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, var(--navy), #2f82c6);
+      box-shadow: 0 10px 24px rgba(0, 32, 96, 0.18);
+      color: var(--white);
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .home-button:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .home-button:focus-visible { outline: 3px solid rgba(63, 145, 207, 0.4); outline-offset: 3px; }
+
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(14px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @media (max-width: 560px) {
+      body { padding: 14px; }
+      .error-card { border-radius: 21px; }
+      .error-card__top { min-height: 102px; padding: 18px; }
+      .error-card__logo { width: 78px; height: 78px; }
+      .error-card__body { padding: 28px 22px 30px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .error-card { animation: none; }
+      .home-button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="error-card" aria-labelledby="error-title">
+    <div class="error-card__top">
+      <img class="error-card__logo" src="/assets/logo.svg" alt="Meridian Business Solutions logo" width="92" height="92">
+    </div>
+    <div class="error-card__body">
+      <p class="error-code">Error 404</p>
+      <h1 id="error-title">Page not found</h1>
+      <p class="message">We couldn’t find this page, or it may have moved recently. You’ll be redirected to the Meridian Business Solutions home page.</p>
+      <p class="redirect-note" aria-live="polite">Redirecting in <strong id="countdown">5</strong> seconds.</p>
+      <a class="home-button" href="https://meridianbizsolutions.com/">Go to Home Page</a>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var destination = "https://meridianbizsolutions.com/";
+      var seconds = 5;
+      var countdown = document.getElementById("countdown");
+
+      var timer = window.setInterval(function () {
+        seconds -= 1;
+        if (countdown) countdown.textContent = String(Math.max(seconds, 0));
+        if (seconds <= 0) {
+          window.clearInterval(timer);
+          window.location.replace(destination);
+        }
+      }, 1000);
+    }());
+  </script>
+</body>
+</html>
