@@ -51,6 +51,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand-name {
   justify-self: center;
   text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
   text-align: center;
   font-size: clamp(19px, 2.05vw, 31px);
   line-height: 1.05;
