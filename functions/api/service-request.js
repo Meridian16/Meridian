@@ -42,7 +42,7 @@ export async function onRequestPost(context) {
   }
 
   const toEmail = env.TO_EMAIL || "info@meridianbizsolutions.com";
-  const fromEmail = env.FROM_EMAIL || "Meridian Business Solutions <requests@meridianbizsolutions.com>";
+  const fromEmail = env.FROM_EMAIL || "Web Site Request <requests@meridianbizsolutions.com>";
 
   const escapeHtml = (str = "") =>
     String(str)
