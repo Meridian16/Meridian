@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="t d">
-  <title id="t">President's Volunteer Service Award</title><desc id="d">President's Volunteer Service Award reference badge</desc>
-  <rect width="220" height="220" rx="28" fill="#fff"/>
-  <circle cx="110" cy="89" r="63" fill="#002060"/>
-  <circle cx="110" cy="89" r="52" fill="#fff" stroke="#B22234" stroke-width="7"/>
-  <path d="M110 42l12 27 29 3-22 19 7 29-26-15-26 15 7-29-22-19 29-3 12-27z" fill="#B22234"/>
-  <text x="110" y="172" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="900" fill="#002060">PRESIDENT'S VOLUNTEER</text>
-  <text x="110" y="194" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="900" fill="#B22234">SERVICE AWARD</text>
-</svg>

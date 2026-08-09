@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 160 100" role="img" aria-label="Educational counseling illustration">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="160" y2="100"><stop stop-color="#EAF8FF"/><stop offset="1" stop-color="#CBEAFF"/></linearGradient><linearGradient id="orb" x1="35" y1="20" x2="128" y2="92"><stop stop-color="#72C7F5"/><stop offset="1" stop-color="#3B86C8"/></linearGradient></defs>
-<rect width="160" height="100" rx="16" fill="url(#bg)"/><circle cx="133" cy="20" r="29" fill="#fff" opacity=".44"/><circle cx="19" cy="91" r="31" fill="#8ED5FB" opacity=".28"/><circle cx="80" cy="50" r="36" fill="url(#orb)" opacity=".18"/>
-<g fill="none" stroke="#002060" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 45l42-18 42 18-42 18-42-18z"/><path d="M54 54v19c15 10 37 10 52 0V54"/><path d="M122 45v24"/><circle cx="122" cy="75" r="3.5" fill="#002060" stroke="none"/></g>
-</svg>

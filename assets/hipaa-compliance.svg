@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="t d">
-  <title id="t">HIPAA Compliance</title><desc id="d">Generic HIPAA compliance badge</desc>
-  <rect width="220" height="220" rx="28" fill="#fff"/>
-  <path d="M110 24l63 24v47c0 46-25 78-63 101-38-23-63-55-63-101V48l63-24z" fill="#0b6b8e"/>
-  <path d="M77 104l22 22 45-52" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="110" y="170" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="900" fill="#fff">HIPAA</text>
-  <text x="110" y="193" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#002060">COMPLIANCE</text>
-</svg>

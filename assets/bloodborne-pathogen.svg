@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="t d">
-  <title id="t">Bloodborne Pathogen Training</title><desc id="d">Generic bloodborne pathogen training badge</desc>
-  <rect width="220" height="220" rx="28" fill="#fff"/>
-  <circle cx="110" cy="94" r="67" fill="#B22234"/>
-  <path d="M110 45c20 29 37 47 37 69 0 22-17 39-37 39s-37-17-37-39c0-22 17-40 37-69z" fill="#fff"/>
-  <path d="M110 73v48M86 97h48" stroke="#B22234" stroke-width="9" stroke-linecap="round"/>
-  <text x="110" y="178" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="900" fill="#002060">BLOODBORNE PATHOGEN</text>
-  <text x="110" y="198" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="800" fill="#B22234">TRAINING</text>
-</svg>
