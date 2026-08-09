@@ -137,7 +137,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   border: 0;
   border-top: 1px solid rgba(0,32,96,.09);
   background: linear-gradient(135deg, var(--navy), #2f82c6);
-  color: #B22234;
+  color: #FFFFFF;
   font-weight: 800;
   font-size: 13px;
   letter-spacing: .01em;
