@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="500" viewBox="0 0 160 125" role="img" aria-label="General notarizations illustration">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="160" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#EAF8FF"/><stop offset="1" stop-color="#CBEAFF"/></linearGradient><linearGradient id="orb" x1="35" y1="20" x2="128" y2="92"><stop stop-color="#72C7F5"/><stop offset="1" stop-color="#3B86C8"/></linearGradient></defs>
-<rect width="160" height="125" rx="16" fill="url(#bg)"/>
-<circle cx="133" cy="20" r="29" fill="#fff" opacity=".44"/><circle cx="19" cy="91" r="31" fill="#8ED5FB" opacity=".28"/>
-<circle cx="80" cy="51" r="38" fill="url(#orb)" opacity=".18"/>
-<g fill="none" stroke="#002060" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M60 43h40v31H60z"/><path d="M67 51h26M67 59h20M69 74v12l-8 11h38l-8-11V74"/><path d="M55 98h50v10H55z"/></g>
-</svg>
