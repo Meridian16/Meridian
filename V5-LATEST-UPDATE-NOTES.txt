@@ -1,0 +1,23 @@
+Meridian Business Solutions - V5 Latest Update
+
+Changes in this package:
+- Removed the two requested instructional bullet lines from the document upload popup.
+- Kept the upload honeypot field for spam protection but made it definitively hidden.
+- Styled the native Choose File button to match the Upload Documents button theme.
+- Document upload popup closes automatically shortly after a successful upload.
+- Removed duplicate assets/Logo.png; retained assets/logo.png.
+- RON service order is now Remote Notarization, I-9 Verification, Finger Printing, Secure Digital Records, Printing Services.
+- Updated RON card descriptions and Schedule Service service names.
+- Apostille Support renamed to Apostille Service and related scheduling text updated.
+- Scheduled Routes renamed to Field Inspections and related descriptions/scheduling text updated.
+- Added Professional, Discreet, Background Screened, and E&O Insured badges to Notary and RON pages above credential logos.
+- Added Call, SMS, and WhatsApp icons before Facebook on all pages with the main header, linked to (703) 634-3365.
+- Added matching local fingerprinting and field-inspection SVG illustrations.
+
+Preserved backend/communication files unchanged:
+- js/app.js
+- functions/api/service-request.js
+- functions/api/partner-inquiry.js
+- functions/api/document-upload.js
+
+The existing Schedule Service, Partner With Us, Google Drive upload, and upload email notification integrations remain intact.

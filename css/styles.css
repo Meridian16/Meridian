@@ -609,5 +609,33 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .upload-file-field input[type="file"] { padding: 11px 12px; background: #fff; }
 .field-help { display: block; margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 1.45; }
 .selected-files { display: block; min-height: 18px; margin-top: 5px; color: var(--navy); font-size: 12px; font-weight: 700; }
-.form-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important; }
+.form-honeypot { display: none !important; position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important; }
 [data-document-upload-card] { cursor: pointer; }
+
+/* V5 service refinements */
+.service-trust-strip {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 9px;
+  margin: 14px auto 10px; padding: 0 12px;
+}
+.service-trust-strip span {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 30px;
+  padding: 6px 12px; border: 1px solid rgba(178,34,52,.22); border-radius: 999px;
+  background: rgba(255,255,255,.9); color: #002060; box-shadow: 0 4px 12px rgba(0,32,96,.06);
+  font-size: 12px; font-weight: 800; letter-spacing: .01em;
+}
+.upload-file-field input[type="file"]::file-selector-button {
+  margin-right: 12px; border: 0; border-radius: 11px; padding: 10px 14px;
+  color: #fff; background: linear-gradient(135deg, var(--navy), #2f82c6);
+  font: inherit; font-size: 13px; font-weight: 800; cursor: pointer;
+  transition: filter .18s ease, transform .18s ease;
+}
+.upload-file-field input[type="file"]::file-selector-button:hover { filter: brightness(1.08); }
+.upload-file-field input[type="file"]::-webkit-file-upload-button {
+  margin-right: 12px; border: 0; border-radius: 11px; padding: 10px 14px;
+  color: #fff; background: linear-gradient(135deg, var(--navy), #2f82c6);
+  font: inherit; font-size: 13px; font-weight: 800; cursor: pointer;
+}
+@media (max-width: 620px) {
+  .service-trust-strip { gap: 7px; margin-top: 11px; }
+  .service-trust-strip span { font-size: 11px; padding: 5px 10px; }
+}

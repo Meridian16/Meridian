@@ -107,6 +107,10 @@
       setStatus(`Thank you. Your documents were received successfully.${ref} We’ll be in touch shortly.`, 'success');
       form.reset();
       if (selectedFiles) selectedFiles.textContent = '';
+      window.setTimeout(() => {
+        closeModal();
+        setStatus();
+      }, 900);
     } catch (error) {
       setStatus(error.message || 'Unable to upload the documents. Please try again.', 'error');
     } finally {
