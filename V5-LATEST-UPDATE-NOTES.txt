@@ -21,3 +21,11 @@ Preserved backend/communication files unchanged:
 - functions/api/document-upload.js
 
 The existing Schedule Service, Partner With Us, Google Drive upload, and upload email notification integrations remain intact.
+
+Latest V5 refinements:
+- Notary and RON service standards now use four separate centered compact button-style badges: Professional, Discreet, Background Screened, and E&O Insured.
+- WhatsApp keeps its traditional green icon color while the other social icons retain the existing site styling.
+- On Notary and RON, the first bottom credential image now uses the SigningAgent profile badge URL supplied by the site owner; both bottom credential images link to https://www.signingagent.com/profile/400258889.
+- The SigningAgent profile badge is visually blended with a transparent treatment and retains the existing credential dimensions.
+- The RON Printing Services document picker now uses a custom blue Choose Files control styled to match the Upload Documents action instead of the browser-default gray file button.
+- Existing Schedule Service, Partner With Us, Google Drive upload, and email notification JavaScript/backend files were not modified.

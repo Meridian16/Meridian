@@ -639,3 +639,51 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .service-trust-strip { gap: 7px; margin-top: 11px; }
   .service-trust-strip span { font-size: 11px; padding: 5px 10px; }
 }
+
+
+/* V5 credential and contact refinements */
+.social-link[href^="https://wa.me/"] { color: #25D366; }
+.social-link[href^="https://wa.me/"]:hover { color: #128C7E; }
+
+.service-trust-strip { gap: 10px; }
+.service-trust-strip .service-trust-badge {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 32px;
+  padding: 7px 15px; border: 1px solid rgba(0,32,96,.16); border-radius: 10px;
+  background: linear-gradient(180deg, #ffffff 0%, #edf6ff 100%);
+  color: #002060; box-shadow: 0 5px 14px rgba(0,32,96,.10);
+  font-size: 12px; font-weight: 800; letter-spacing: .015em; white-space: nowrap;
+}
+
+.notary-credentials .credential-link, .credential-strip .credential-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 10px; text-decoration: none; background: transparent;
+}
+.notary-credentials .nsa-profile-badge, .credential-strip .nsa-profile-badge {
+  background: transparent !important; mix-blend-mode: multiply;
+}
+
+/* Custom document picker button: keep the native input accessible but visually hidden */
+.upload-file-field .file-picker-row {
+  position: relative; display: flex; align-items: center; gap: 12px; min-height: 42px; flex-wrap: wrap;
+}
+.upload-file-field .native-file-input {
+  position: absolute !important; width: 1px !important; height: 1px !important;
+  padding: 0 !important; margin: 0 !important; opacity: 0 !important; overflow: hidden !important;
+  clip: rect(0 0 0 0) !important; clip-path: inset(50%) !important; white-space: nowrap !important;
+}
+.upload-file-field .file-picker-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 40px; padding: 10px 17px; border: 0; border-radius: 12px;
+  color: #fff; background: linear-gradient(135deg, var(--navy), #2f82c6);
+  box-shadow: 0 7px 16px rgba(0,32,96,.14); font-size: 13px; font-weight: 850;
+  cursor: pointer; transition: filter .18s ease, transform .18s ease;
+}
+.upload-file-field .file-picker-button:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.upload-file-field .native-file-input:focus-visible + .file-picker-button {
+  outline: 3px solid rgba(63,145,207,.35); outline-offset: 2px;
+}
+.upload-file-field .selected-files { margin: 0; min-height: auto; font-weight: 700; color: var(--muted); }
+@media (max-width: 620px) {
+  .service-trust-strip .service-trust-badge { font-size: 11px; padding: 6px 11px; min-height: 29px; }
+  .upload-file-field .file-picker-row { align-items: flex-start; flex-direction: column; gap: 7px; }
+}
