@@ -1,0 +1,38 @@
+Meridian Business Solutions - V5.1 Update Notes
+
+Base: Meridian V5
+
+Changes in this package:
+1. Replaced "Select a service for preliminary details." with "Select a service to learn more..." across service pages.
+2. Added a compact Testimonials strip to index.html between the service cards and footer.
+3. The testimonial strip rotates one sample testimonial upward every 30 seconds.
+4. Added a "More..." link that opens a testimonials modal.
+5. The modal contains five service tabs:
+   - Notary
+   - Remote Notary
+   - Auto Services
+   - Logistics
+   - Educational Counseling
+6. Each tab contains eight sample testimonial entries with a name initial and Virginia city/state.
+7. Sample testimonials are visibly identified as sample/layout content and should be replaced with verified customer reviews before public use.
+8. Testimonials have their own js/testimonials.js file so the existing communication code remains isolated.
+
+Communication stability:
+- js/app.js unchanged.
+- functions/api/service-request.js unchanged.
+- functions/api/partner-inquiry.js unchanged.
+- Schedule Service and Partner With Us API logic untouched.
+
+Latest testimonial refinements:
+- Removed the visible Sample badge from the home testimonial strip.
+- Expanded the testimonial strip maximum width by 10% (1080px to 1188px).
+- Changed the rotating testimonial interval from 30 seconds to 10 seconds.
+- Rebalanced the home-page grid so the testimonial strip sits centered in the space between the service cards and footer on desktop/tablet.
+- Removed the visible sample-layout notice from the testimonial popup.
+- Expanded each testimonial category from 8 to 15 layout entries. Placeholder copy remains marked in source code for replacement with verified feedback before public launch.
+
+Mobile Oil Change pricing update:
+- Added package pricing for eligible Domestic & Asian Vehicles ($100) and European Vehicles ($150).
+- Added premium oil/filter wording, included-service details, courtesy inspection/tire pressure/fluid top-off messaging, and military/first-responder discount wording.
+- Prices use #B22234 with a handwriting-style font stack.
+- Implemented in auto.html + css/styles.css + js/oil-change.js only; shared app.js and Cloudflare communication functions remain unchanged.

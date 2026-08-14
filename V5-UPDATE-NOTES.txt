@@ -1,0 +1,19 @@
+Meridian Business Solutions - Version 5
+
+Changes in this package:
+- Remote Notary renamed to Remote Notary & Printing in the main navigation and home service card.
+- Remote Notary summary updated to include printing/document support.
+- RON.html: Document Upload & Review replaced with Printing Services and moved to the last card.
+- Printing Services opens a dedicated upload popup with a quick summary, two bullets, Full Name, Email, Phone, Service/Request Type, Notes, and multi-file upload.
+- Accepted files: PDF, JPG/JPEG, PNG, DOC, DOCX.
+- Added /api/document-upload Cloudflare Pages Function.
+- The function creates a Google Drive folder named from the submitted Full Name, uploads the documents, and creates request-info.txt.
+- Master Drive folder fallback ID: 1_Rp7zDUMzOwXIE-uLMhm-bw1BToDhRK_
+- Google OAuth credentials are intentionally NOT included. Configure them as Cloudflare encrypted secrets using GOOGLE-DRIVE-UPLOAD-SETUP.md.
+- Existing Schedule Service and Partner With Us functions were not modified.
+- Added successful document-upload email notification through the existing Resend integration.
+- Upload notification defaults to info@meridianbizsolutions.com and uses the customer email as Reply-To.
+- Subject format: {Service / Request Type} Document Upload & requested from Meridian Website.
+- Notification includes customer/request details, uploaded filenames, and a direct Google Drive folder link; documents are not attached.
+- Email notification is non-blocking: a notification failure does not invalidate an already successful Google Drive upload.
+

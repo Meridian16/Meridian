@@ -599,3 +599,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .oil-pricing-option { min-height: 0; }
   .oil-price { font-size: 27px; }
 }
+
+
+/* V5 secure document upload: isolated styles */
+.upload-modal { width: min(820px, 100%); }
+.upload-summary { margin: 0 0 20px; padding: 16px 18px; border-radius: 14px; background: var(--sky); color: var(--text); }
+.upload-summary p { margin: 0 0 9px; font-size: 15px; line-height: 1.6; }
+.upload-summary ul { margin: 0; padding-left: 21px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.upload-file-field input[type="file"] { padding: 11px 12px; background: #fff; }
+.field-help { display: block; margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.selected-files { display: block; min-height: 18px; margin-top: 5px; color: var(--navy); font-size: 12px; font-weight: 700; }
+.form-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important; }
+[data-document-upload-card] { cursor: pointer; }
