@@ -58,20 +58,20 @@
       'Straightforward package pricing with no separate tax, oil-disposal fee, or additional-quart charge.',
       'Honoring those who serve: active-duty and retired military members and first responders receive 10% off.',
       'The correct oil specification, viscosity, and filter fitment are confirmed before your appointment.',
-      'A safe, level, and accessible service location is required for mobile service.'
+      'Complimentary engine or cabin air-filter installation while we are servicing your vehicle. Provide the filter, or we can purchase a premium replacement on your behalf and provide the receipt.'
     ]
   });
 
   const applyFluidPricing = () => renderPricing({
     subtitle: 'Transmission and coolant fluid service at your location',
-    intro: 'Mobile transmission-fluid and engine-coolant service using vehicle-appropriate fluids and a service approach matched to your vehicle.',
-    domesticText: 'Transmission or engine-coolant fluid service for eligible domestic and Asian vehicles.',
+    intro: 'Mobile transmission fluid and engine coolant service using vehicle-appropriate fluids and a service approach matched to your vehicle.',
+    domesticText: 'Transmission fluid or engine coolant service for eligible domestic and Asian vehicles.',
     domesticPrice: '149',
-    europeanText: 'Transmission or engine-coolant fluid service for eligible European vehicles using the required fluid specification.',
+    europeanText: 'Transmission fluid or engine coolant service for eligible European vehicles using the required fluid specification.',
     europeanPrice: '199',
     fluid: true,
     points: [
-      'Transmission-fluid or engine-coolant service is performed when the vehicle design and service location allow safe mobile work.',
+      'Transmission fluid or engine coolant service is performed when the vehicle design and service location allow safe mobile work.',
       'The correct fluid specification and service eligibility are confirmed before the appointment.',
       'Pricing applies to the approved standard service scope; unusual capacity, parts, contamination, leaks, or diagnostic work may require a separate quote.',
       'Warning lights, overheating, major leaks, or transmission concerns may require diagnosis at a repair facility.',

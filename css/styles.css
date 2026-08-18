@@ -690,19 +690,40 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 
 /* V5 pricing, trust-line, and service-detail refinements */
-.service-trust-line {
-  margin: 14px auto 10px;
-  padding: 0 12px;
+.service-trust-line.service-signature {
+  width: min(900px, calc(100% - 24px));
+  margin: 14px auto 11px;
+  padding: 5px 12px 3px;
   text-align: center;
+}
+.service-signature .trust-script {
   color: #B22234;
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1.5;
+  font-family: "Segoe Script", "Brush Script MT", "Lucida Handwriting", cursive;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: .005em;
+}
+.service-signature .trust-ornament {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: min(480px, 78%); margin: 3px auto 2px; color: #B22234;
+}
+.service-signature .trust-ornament span {
+  display: block; height: 1px; flex: 1; background: rgba(178,34,52,.72);
+}
+.service-signature .trust-ornament b {
+  color: #B22234; font-size: 10px; line-height: 1; letter-spacing: 3px; font-weight: 700;
+}
+.service-signature .trust-values {
+  color: #002060;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.35;
   letter-spacing: .01em;
 }
-.service-trust-line span {
-  font-weight: 700;
-  white-space: normal;
+.service-signature .trust-values i {
+  margin: 0 6px; color: #B22234; font-style: normal;
 }
 .oil-price sup {
   position: relative;
@@ -728,5 +749,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   font-weight: 800;
 }
 @media (max-width: 620px) {
-  .service-trust-line { font-size: 11.5px; margin-top: 11px; }
+  .service-trust-line.service-signature { margin-top: 10px; }
+  .service-signature .trust-script { font-size: 17px; }
+  .service-signature .trust-ornament { width: min(390px, 88%); gap: 7px; }
+  .service-signature .trust-values { font-size: 11px; }
+  .service-signature .trust-values i { margin: 0 4px; }
 }

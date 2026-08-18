@@ -16,3 +16,11 @@ Stable communication preserved:
 - Partner With Us backend unchanged.
 - Google Drive document-upload backend unchanged.
 - Document upload front-end submission logic unchanged.
+
+2026-08-17 - Option 5 service signature update
+- Notary/RON: styled “Signed with confidence. Sealed with trust.” signature line with centered stars/dividers and four trust descriptors.
+- Auto: added matching signature treatment with Mobile • Reliable • Transparent • Convenient.
+- Logistics: added matching signature treatment with Reliable • Timely • Secure • Accountable.
+- Education: added matching signature treatment with Guidance • Preparation • Confidence • Success.
+- Mobile Oil Change: replaced safe-location line with complimentary engine/cabin air-filter installation wording.
+- Fluid Service: removed hyphens from transmission fluid / engine coolant wording.
