@@ -1,31 +1,18 @@
-Meridian Business Solutions - V5 Latest Update
+Meridian Business Solutions V5 - Latest Update
+Date: August 16, 2026
 
-Changes in this package:
-- Removed the two requested instructional bullet lines from the document upload popup.
-- Kept the upload honeypot field for spam protection but made it definitively hidden.
-- Styled the native Choose File button to match the Upload Documents button theme.
-- Document upload popup closes automatically shortly after a successful upload.
-- Removed duplicate assets/Logo.png; retained assets/logo.png.
-- RON service order is now Remote Notarization, I-9 Verification, Finger Printing, Secure Digital Records, Printing Services.
-- Updated RON card descriptions and Schedule Service service names.
-- Apostille Support renamed to Apostille Service and related scheduling text updated.
-- Scheduled Routes renamed to Field Inspections and related descriptions/scheduling text updated.
-- Added Professional, Discreet, Background Screened, and E&O Insured badges to Notary and RON pages above credential logos.
-- Added Call, SMS, and WhatsApp icons before Facebook on all pages with the main header, linked to (703) 634-3365.
-- Added matching local fingerprinting and field-inspection SVG illustrations.
+Changes in this update:
+- Notary and RON trust badges replaced with centered red trust statement.
+- Mobile Oil Change prices updated to $99.99 and $149.99 with superscript .99 styling.
+- Military/first responder discount line changed to theme red.
+- Fluid Service popup now includes Domestic/Asian $149.99 and European $199.99 transmission/coolant service packages.
+- Battery Service wording updated for testing and replacement support.
+- RON Printing Services card now opens service information from the card body; Upload Documents opens only from the bottom button.
+- Privacy popup wording changed from “should be updated” to “will be updated.”
+- Added sitemap.xml and robots.txt for search-engine discovery.
 
-Preserved backend/communication files unchanged:
-- js/app.js
-- functions/api/service-request.js
-- functions/api/partner-inquiry.js
-- functions/api/document-upload.js
-
-The existing Schedule Service, Partner With Us, Google Drive upload, and upload email notification integrations remain intact.
-
-Latest V5 refinements:
-- Notary and RON service standards now use four separate centered compact button-style badges: Professional, Discreet, Background Screened, and E&O Insured.
-- WhatsApp keeps its traditional green icon color while the other social icons retain the existing site styling.
-- On Notary and RON, the first bottom credential image now uses the SigningAgent profile badge URL supplied by the site owner; both bottom credential images link to https://www.signingagent.com/profile/400258889.
-- The SigningAgent profile badge is visually blended with a transparent treatment and retains the existing credential dimensions.
-- The RON Printing Services document picker now uses a custom blue Choose Files control styled to match the Upload Documents action instead of the browser-default gray file button.
-- Existing Schedule Service, Partner With Us, Google Drive upload, and email notification JavaScript/backend files were not modified.
+Stable communication preserved:
+- Schedule Service backend unchanged.
+- Partner With Us backend unchanged.
+- Google Drive document-upload backend unchanged.
+- Document upload front-end submission logic unchanged.

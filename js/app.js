@@ -174,7 +174,7 @@
         <h3>Security and retention</h3>
         <p>Reasonable safeguards are used to protect information. No storage or transmission method is completely secure. Records are retained only as long as needed for business, legal, tax, insurance, or regulatory purposes.</p>
         <h3>Cookies and analytics</h3>
-        <p>This starter website does not include advertising cookies or analytics by default. This policy should be updated if analytics, payments, booking tools, remote-notary platforms, or embedded social features are added.</p>
+        <p>This starter website does not include advertising cookies or analytics by default. This policy will be updated if analytics, payments, booking tools, remote-notary platforms, or embedded social features are added.</p>
         <h3>Your choices</h3>
         <p>Contact <a href="mailto:info@meridianbizsolutions.com">info@meridianbizsolutions.com</a> to ask about your information, request a correction, or request deletion when retention is not legally required.</p>`
     },

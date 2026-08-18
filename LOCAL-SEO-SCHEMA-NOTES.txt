@@ -1,0 +1,23 @@
+Meridian Business Solutions - Local SEO Structured Data Notes
+
+Added JSON-LD structured data to:
+- index.html
+- notary.html
+- RON.html
+- auto.html
+- logistics.html
+- education.html
+
+The home page includes a LocalBusiness entity, WebSite entity, Northern Virginia service area, business contact details, and a service catalog.
+
+Each service page includes a Service entity tied back to the same Meridian Business Solutions LocalBusiness entity and identifies the applicable service area.
+
+Important service-area-business note:
+No street address or geo coordinates were added because the current site does not publish a physical customer-facing business address. Google Business Profile guidance allows service-area businesses that do not serve customers at their address to hide that address. Google Search's LocalBusiness rich-result documentation, however, currently lists a physical address as a required property for LocalBusiness rich-result eligibility. This markup remains useful Schema.org business/service context, but a LocalBusiness rich result is not guaranteed without a compliant physical address. Do not add a made-up, virtual, mailbox, or hidden address solely for structured data.
+
+After deployment:
+1. Test https://meridianbizsolutions.com/ with Google Rich Results Test.
+2. Test each service URL.
+3. Use Search Console URL Inspection and request indexing as needed.
+4. Keep sitemap.xml submitted in Search Console.
+5. Keep Google Business Profile service areas accurate and consistent with the website.
