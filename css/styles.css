@@ -755,3 +755,268 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .service-signature .trust-values { font-size: 11px; }
   .service-signature .trust-values i { margin: 0 4px; }
 }
+
+
+/* V5 Option 5 full-width service signature treatment */
+.option-five-signature {
+  width: min(1040px, calc(100% - 28px)) !important;
+  margin: 16px auto 12px !important;
+  padding: 9px 20px 10px !important;
+  border: 1px solid rgba(0,32,96,.08);
+  border-radius: 14px;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 5px 17px rgba(0,32,96,.08);
+}
+.option-five-signature .trust-title-row {
+  display: grid;
+  grid-template-columns: minmax(58px, 110px) minmax(0, 1fr) minmax(58px, 110px);
+  align-items: center;
+  gap: 14px;
+}
+.option-five-signature .trust-title-center { min-width: 0; text-align: center; }
+.option-five-signature .trust-side-image {
+  display: block;
+  width: 100%;
+  max-width: 102px;
+  height: 58px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.option-five-signature .trust-script {
+  color: #B22234;
+  font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting", cursive;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: .002em;
+}
+.option-five-signature .trust-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: min(430px, 78%);
+  margin: 3px auto 1px;
+  color: #B22234;
+}
+.option-five-signature .trust-ornament span {
+  height: 1px;
+  flex: 1;
+  background: rgba(178,34,52,.70);
+}
+.option-five-signature .trust-ornament b {
+  color: #002060;
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.option-five-signature .trust-ornament b::first-letter { color: #B22234; }
+.option-five-signature .trust-values {
+  margin-top: 2px;
+  color: #002060;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  letter-spacing: .01em;
+}
+.option-five-signature .trust-values i { margin: 0 8px; color: #B22234; font-style: normal; }
+@media (max-width: 760px) {
+  .option-five-signature { padding: 9px 12px 10px !important; }
+  .option-five-signature .trust-title-row { grid-template-columns: 66px minmax(0,1fr) 66px; gap: 8px; }
+  .option-five-signature .trust-side-image { height: 46px; max-width: 66px; }
+  .option-five-signature .trust-script { font-size: 15px; }
+  .option-five-signature .trust-values { font-size: 11px; }
+  .option-five-signature .trust-values i { margin: 0 4px; }
+}
+@media (max-width: 480px) {
+  .option-five-signature .trust-title-row { grid-template-columns: 46px minmax(0,1fr) 46px; gap: 5px; }
+  .option-five-signature .trust-side-image { height: 38px; max-width: 46px; }
+  .option-five-signature .trust-script { font-size: 13px; line-height: 1.16; }
+  .option-five-signature .trust-ornament { width: min(300px, 92%); }
+  .option-five-signature .trust-values { font-size: 10.5px; line-height: 1.5; }
+}
+
+.option-five-signature.auto-trust .trust-side-image-left { max-width: 128px; height: 62px; }
+.option-five-signature.auto-trust .trust-side-image-right { max-width: 82px; height: 62px; }
+.option-five-signature.notary-trust .trust-side-image-right { max-width: 90px; }
+.option-five-signature.ron-trust .trust-side-image-right { max-width: 92px; }
+.option-five-signature.logistics-trust .trust-side-image-right { max-width: 88px; }
+.option-five-signature.education-trust .trust-side-image-left { max-width: 92px; }
+.option-five-signature.education-trust .trust-side-image-right { max-width: 88px; }
+
+
+/* V5.4 trust banner visual matching + compact spacing */
+.custom-trust-signature {
+  box-sizing: border-box;
+  width: min(1040px, calc(100% - 28px));
+  height: 102px;
+  margin: 12px auto 10px;
+  padding: 5px 14px 4px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 32, 96, .08);
+  border-radius: 14px;
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 5px 17px rgba(0, 32, 96, .08);
+  text-align: center;
+}
+.custom-trust-signature .trust-title-row {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) 170px;
+  align-items: center;
+  gap: 10px;
+  height: 91px;
+}
+.custom-trust-signature .trust-title-center {
+  min-width: 0;
+  height: 88px;
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  align-items: end;
+}
+.custom-trust-signature .trust-side-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 86px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.custom-trust-signature .trust-script {
+  color: #B22234;
+  font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting", cursive;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: 0;
+  white-space: nowrap;
+  align-self: end;
+  padding-bottom: 1px;
+}
+.custom-trust-signature .script-navy { color: #002060; }
+.custom-trust-signature .script-red { color: #B22234; }
+.custom-trust-signature .trust-script span {
+  display: inline;
+  margin: 0;
+}
+.custom-trust-signature .trust-script span + span::before { content: " "; }
+.custom-trust-signature .trust-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: min(470px, 86%);
+  margin: 0 auto;
+  min-height: 15px;
+}
+.custom-trust-signature .trust-ornament span {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: rgba(178,34,52,.75);
+}
+.custom-trust-signature .trust-ornament b {
+  color: #002060;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.custom-trust-signature .trust-values {
+  margin: 0;
+  padding: 0;
+  color: #002060;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: .002em;
+  white-space: nowrap;
+}
+.custom-trust-signature .trust-values i {
+  margin: 0 7px;
+  color: #B22234;
+  font-style: normal;
+}
+/* Keep the same image artwork and scale across all five pages. */
+.custom-trust-signature.notary-trust .trust-side-image,
+.custom-trust-signature.ron-trust .trust-side-image,
+.custom-trust-signature.auto-trust .trust-side-image,
+.custom-trust-signature.logistics-trust .trust-side-image,
+.custom-trust-signature.education-trust .trust-side-image {
+  max-height: 86px;
+}
+
+@media (max-width: 900px) {
+  .custom-trust-signature {
+    width: min(100%, calc(100% - 22px));
+    height: 96px;
+    margin: 10px auto 9px;
+    padding: 4px 10px 3px;
+  }
+  .custom-trust-signature .trust-title-row {
+    grid-template-columns: 118px minmax(0, 1fr) 118px;
+    gap: 7px;
+    height: 87px;
+  }
+  .custom-trust-signature .trust-title-center { height: 84px; }
+  .custom-trust-signature .trust-side-image { max-height: 78px; }
+  .custom-trust-signature .trust-script { font-size: 20px; }
+  .custom-trust-signature .trust-ornament { min-height: 13px; width: min(420px, 88%); }
+  .custom-trust-signature .trust-values { font-size: 12px; }
+  .custom-trust-signature .trust-values i { margin: 0 5px; }
+}
+
+@media (max-width: 620px) {
+  .custom-trust-signature {
+    width: min(100%, calc(100% - 14px));
+    height: 88px;
+    margin: 8px auto 8px;
+    padding: 3px 6px 2px;
+    border-radius: 11px;
+  }
+  .custom-trust-signature .trust-title-row {
+    grid-template-columns: 58px minmax(0, 1fr) 58px;
+    gap: 4px;
+    height: 81px;
+  }
+  .custom-trust-signature .trust-title-center { height: 78px; }
+  .custom-trust-signature .trust-side-image { max-height: 58px; }
+  .custom-trust-signature .trust-script {
+    font-size: 13.5px;
+    line-height: 1.03;
+    white-space: normal;
+  }
+  .custom-trust-signature .trust-ornament {
+    width: min(250px, 94%);
+    gap: 4px;
+    min-height: 11px;
+  }
+  .custom-trust-signature .trust-ornament b {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .custom-trust-signature .trust-values {
+    font-size: 9.5px;
+    line-height: 1;
+    white-space: normal;
+  }
+  .custom-trust-signature .trust-values i { margin: 0 3px; }
+}
+
+@media (max-width: 390px) {
+  .custom-trust-signature {
+    height: 84px;
+  }
+  .custom-trust-signature .trust-title-row {
+    grid-template-columns: 50px minmax(0, 1fr) 50px;
+    height: 77px;
+  }
+  .custom-trust-signature .trust-title-center { height: 74px; }
+  .custom-trust-signature .trust-side-image { max-height: 52px; }
+  .custom-trust-signature .trust-script { font-size: 12px; }
+  .custom-trust-signature .trust-values { font-size: 8.8px; }
+}
