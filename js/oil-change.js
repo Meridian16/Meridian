@@ -58,7 +58,7 @@
       'Straightforward package pricing with no separate tax, oil-disposal fee, or additional-quart charge.',
       'Honoring those who serve: active-duty and retired military members and first responders receive 10% off.',
       'The correct oil specification, viscosity, and filter fitment are confirmed before your appointment.',
-      'Complimentary engine or cabin air-filter installation while we are servicing your vehicle. Provide the filter, or we can purchase a premium replacement (will provide the receipt).'
+      'Complimentary engine or cabin air-filter installation while we are servicing your vehicle. Provide the filter, or we can purchase a premium replacement on your behalf and provide the receipt.'
     ]
   });
 
